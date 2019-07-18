@@ -5,66 +5,66 @@
     <title>Chapter 04 Practice</title>
 </head>
 <body>
-    <h2>Original Band Members</h2>
-    <div id="divShowOriginalBand"></div>
+    <h2>Original Pop Singers</h2>
+    <div id="divShowOriginalSingers"></div>
 
-    <h2>New Band Members</h2>
+    <h2>New Pop Singers</h2>
     <button id="btnMakeName">Make a name</button>
-    <div id="divShowNewBand"></div>
+    <div id="divShowNewSingers"></div>
 
     <script>
         (function(){
             "use strict";
 
             // Arrays of Band Info
-            var lastNames = ["Aung", "Ye Tun", "Ye Tun", "Win"];
-            var firstNames = ["Ye Tun", "Thura", "Maythansin", "Hla Hla"];
-            var bandNames = ["The Wild One", "Dj", "Hop", "Iron Cross"];
+            var lastNames = ["Sartorius","Bieber","Grande","Gray","Mendes","Gomez","Baker","Swift","Ariel"];
+            var firstNames = ["Jacob","Justin","Ariana","Loren","Shawn","Selena","Cash","Taylor","Baby"];
+            var popular= ["Star1", "Star2", "Star3", "Star4", "Star5", "Star6", "Star7", "Star8", "Star9"];
             var ages = [];
             // var lastNameslength = lastNames.length;
 
             // For Loop (Conditional Statement) to generate random ages, in a range
             for(var i in lastNames) {
                 // # between 12 & 52
-                let randomAgesTmp = (Math.round(Math.random() * 40)) + 12;
+                let randomAgesTmp = (Math.round(Math.random() * 44)) + 16;
                 ages.push(randomAgesTmp);
             } // End of for() Loop for generating ages
 
             console.log(ages);
 
-            var OriginalBandPerson = [];
+            var OriginalPopSingers = [];
             // var randomBandPerson = [];
 
             // Create Objects of the Divs on-screen
-            var elDivShowOriginalBand = document.getElementById("divShowOriginalBand");
-            var elDivShowNewBand = document.getElementById("divShowNewBand");
+            var elDivShowOriginalSingers = document.getElementById("divShowOriginalSingers");
+            
 
             // Create an Object of the Button on-screen
             var elBtnMakeName = document.getElementById("btnMakeName");
 
-            function BandMember(lastName, firstName, bandName, age) {
+            function Singer(lastName, firstName, star, age) {
                 this.lastName   = lastName;
                 this.firstName  = firstName;
-                this.bandName   = bandName;
+                this.popularRate   = star;
                 this.age        = age;
 
                 this.info = function() {
-                    var fullBandMemberInfo = this.firstName + " " + this.lastName + " is " + 
-                    this.age + " years old, from " + this.bandName + ".";
-                    return fullBandMemberInfo;
+                    var fullSingerInfo = this.firstName + " " + this.lastName + " is " + 
+                    this.age + " years old, from " + this.popularRate+ ".";
+                    return fullSingerInfo;
                 }
             } // End of BandMember() Object
 
             for(var i in lastNames) {
-                let OriginalBandPersonTmp = new BandMember(
+                let OriginalSingerTmp = new Singer(
                     lastNames[i],
                     firstNames[i],
-                    bandNames[i],
+                    popular[i],
                     ages[i],
                 );
                 
-                OriginalBandPerson.push(OriginalBandPersonTmp);
-                elDivShowOriginalBand.innerHTML += "<p>" + OriginalBandPerson[i].info() + "</p>";
+                OriginalPopSingers.push(OriginalSingerTmp);
+                elDivShowOriginalSingers.innerHTML += "<p>" + OriginalPopSingers[i].info() + "</p>";
             } // End for Loop of creating a BandMember Object and store it in the Array
 
             function fnGenerateNames() {
@@ -72,35 +72,35 @@
                 // Makes a copy of an Array
                 var tmpLastNames = lastNames.slice(0);
                 var tmpFirstNames = firstNames.slice(0);
-                var tmpBandNames = bandNames.slice(0);
+                var tmpPopular = popular.slice(0);
                 var tmpAges = ages.slice(0);
                 // var tmpLastNamesLength = tmpLastNames.length;
 
-                var randomBandPerson = [];
-                elDivShowNewBand.innerHTML = "";
+                var randomSingers= [];
+                var elDivShowNewSingers = document.getElementById("divShowNewSingers");
 
                 for(var i in lastNames) {
                     let randomLastNameNum = Math.floor(Math.random()* tmpLastNames.length);
                     let randomFirstNameNum = Math.floor(Math.random() * tmpFirstNames.length);
-                    let randomBandNames = Math.floor(Math.random() * tmpBandNames.length);
+                    let randomSinger = Math.floor(Math.random() * tmpPopular.length);
                     let randomAges = Math.floor(Math.random() * tmpAges.length);
 
-                    let randomBandPersonTmp = new BandMember(
+                    let randomSingerTmp = new Singer(
                         tmpLastNames[randomLastNameNum],
                         tmpFirstNames[randomFirstNameNum],
-                        tmpBandNames[randomBandNames],
+                        tmpPopular[randomSingers],
                         tmpAges[randomAges],
                     );
                     
                     // Splice to remove an item from an Array
                     tmpLastNames.splice(randomLastNameNum, 1);
                     tmpFirstNames.splice(randomFirstNameNum, 1);
-                    tmpBandNames.splice(randomBandNames, 1);
+                    tmpPopular.splice(randomSinger, 1);
                     tmpAges.splice(randomAges, 1);
 
-                    randomBandPerson.push(randomBandPersonTmp);
+                    randomSingers.push(randomSingerTmp);
 
-                    elDivShowNewBand.innerHTML += "<p>" + randomBandPerson[i].info() + "</p>";
+                    elDivShowNewSingers.innerHTML += "<p>" + randomSingers[i].info() + "</p>";
                 } // End for() Loop of generating random names
 
             } // End fnGenerateNames()
@@ -111,10 +111,10 @@
     </script>
 </body>
     <!-- 
-        Name:           Ye Tun Aung
-        Email:          yta.megroup@gmail.com
+        Name:           Daw Ei Phyo Thein
+        Email:          eiphyothein@gmail.com
         Project:        Decisions & Loops
         Description:    Look at iteration and looping construct
-        Date:           July 11, 2019 (Modified)
+        Date:           July 18, 2019 (Modified)
     -->
 </html>
