@@ -1,0 +1,65 @@
+body {
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 0.5em;
+}
+h1{
+    color: blueviolet;
+    font-size: 32px;
+}
+
+#divShowFight {
+    width: 100%;
+}
+
+#divLeftCol {
+    background-color: skyblue;
+    color: white;
+    width: 50%;
+    float: left;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    line-height: 40px;
+}
+
+#divRightCol {
+    background-color: #47251b;
+    color: white;
+    width: 50%;
+    float: left;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    line-height: 40px;
+}
+
+#divCenterCol {    
+    width: 98%;
+    clear: both;
+}
+
+.fightTie {
+    background-color: yellow;
+    color: black;
+    padding: 1em;
+}
+
+.fightWin {
+    background-color:  skyblue;
+    color: white;
+    padding: 1em;    
+}
+
+.fightLose {
+    background-color: #47251b;
+    color: white;
+    padding: 1em;
+}
+
+.textAlign {
+    text-align: left;
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 20px; 
+    letter-spacing: 0.1em;   
+}
+
+.imageHeight {
+    height: 360px;
+}
