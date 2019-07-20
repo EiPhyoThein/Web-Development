@@ -152,7 +152,9 @@
         elDivRightCol = document.getElementById("divRightCol"),
         elDivCenterCol = document.getElementById("divCenterCol"),
         elUlAll = document.getElementsByTagName("ul"),
-        elImgAll = document.getElementsByTagName("img");
+        elImgAll = document.getElementsByTagName("img"),
+        elScoreLeft = document.getElementById("scoreLeft"),
+        elScoreRight = document.getElementById("scoreRight");
 
     elBtnFight.addEventListener("click", fnFight, false);
 
@@ -182,6 +184,9 @@
 
             elDivCenterCol.innerHTML = "<h3>A tie!</h3>";
             elDivCenterCol.className = "fightTie";
+
+            elScoreLeft.textContent="eg.30";
+            elScoreRight.textContent="eg.20";
         } else if (heroAll[randomHero].power() > villainAll[randomVillain].power()) {
             console.log("Hero Wins.");
 
@@ -199,6 +204,10 @@
 
             elDivCenterCol.innerHTML = "<h3>Hero Wins!</h3>";
             elDivCenterCol.className = "fightWin";
+
+            elScoreLeft.textContent="eg.30";
+            elScoreRight.textContent="eg.20";
+
         } else {
             console.log("Hero Loses!");
 
@@ -216,6 +225,9 @@
 
             elDivCenterCol.innerHTML = "<h3>Hero Loses!</h3>";
             elDivCenterCol.className = "fightLose";
+
+            elScoreLeft.textContent="eg.30";
+            elScoreRight.textContent="eg.20";
         }; // End fnFight()
     }
 }());

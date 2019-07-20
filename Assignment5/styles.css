@@ -19,8 +19,20 @@ h1{
     float: left;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     line-height: 40px;
+    z-index: 0;
 }
-
+#scoreLeft{
+    z-index: 1;
+    position: absolute;
+    top: 75%;
+    left: 40%;
+}
+#scoreRight{
+    z-index: 1;
+    position: absolute;
+    top: 75%;
+    right: 10%;
+}
 #divRightCol {
     background-color: #47251b;
     color: white;
@@ -28,22 +40,25 @@ h1{
     float: left;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     line-height: 40px;
+    z-index: 0;
 }
 
 #divCenterCol {    
     width: 98%;
     clear: both;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
 }
 
 .fightTie {
     background-color: yellow;
-    color: black;
+    color: red;
     padding: 1em;
 }
 
 .fightWin {
     background-color:  skyblue;
-    color: white;
+    color: green;
     padding: 1em;    
 }
 
@@ -61,5 +76,5 @@ h1{
 }
 
 .imageHeight {
-    height: 360px;
+    height: 240px;
 }
