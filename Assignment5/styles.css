@@ -26,12 +26,19 @@ h1{
     position: absolute;
     top: 75%;
     left: 40%;
+    font-family: cursive;
+    color: green;
+    font-size: 30px;
 }
 #scoreRight{
     z-index: 1;
     position: absolute;
     top: 75%;
     right: 10%;
+    font-family: cursive;
+    color: green;
+    font-size: 30px;
+
 }
 #divRightCol {
     background-color: #47251b;
@@ -58,7 +65,9 @@ h1{
 
 .fightWin {
     background-color:  skyblue;
-    color: green;
+    color: white;
+    text-shadow: 1px 1px blue;
+    
     padding: 1em;    
 }
 
@@ -66,6 +75,7 @@ h1{
     background-color: #47251b;
     color: white;
     padding: 1em;
+    text-shadow: 1px 1px red;
 }
 
 .textAlign {
