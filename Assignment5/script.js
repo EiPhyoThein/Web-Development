@@ -12,6 +12,8 @@
         heroStamina = [],
         heroDurability = [],
         heroIntelligence = [],
+        
+        totalHero=heroNames.length,
 
         heroAll = [],
         
@@ -26,7 +28,7 @@
             "images/jeangrey.png",
         ];
 
-    for (var i = 0; i < maxStats; i++) {
+    for (var i = 0; i < totalHero; i++) {
         let tempHeroStrength = Math.ceil(Math.random() * maxStatsValue),
             tempHeroSpeed = Math.ceil(Math.random() * maxStatsValue),
             tempHeroAgility = Math.ceil(Math.random() * maxStatsValue),
@@ -40,6 +42,7 @@
         heroStamina.push(tempHeroStamina);
         heroDurability.push(tempHeroDurability);
         heroIntelligence.push(tempHeroIntelligence);
+        
     } // End For Loop, Hero Powers
 
     var villainNames = ["Venom", "Kingpin", "Black Cat", "Dr. Doom", "Magneto", "Super Skrull"],
@@ -50,6 +53,7 @@
         villainDurability = [],
         villainIntelligence = [],
 
+        totalVillain=villainNames.length,
         villainAll = [],
         
         villainImage = [
@@ -64,7 +68,7 @@
             "images/superskrull.png",
         ];
 
-    for (var i = 0; i < maxStats; i++) {
+    for (var i = 0; i < totalVillain; i++) {
         let tempVillainStrength = Math.ceil(Math.random() * maxStatsValue),
             tempVillainSpeed = Math.ceil(Math.random() * maxStatsValue),
             tempVillainAgility = Math.ceil(Math.random() * maxStatsValue),
@@ -80,7 +84,7 @@
         villainIntelligence.push(tempVillainIntelligence);
     } // End For Loop, Vilain Powers
 
-    function SuperCharacter(name, strength, speed, agility, stamina, durability, intelligence, image) {
+    function SuperCharacter(name, strength, speed, agility, stamina, durability, intelligence, image,totalScore) {
         this.name = name;
         this.strength = strength;
         this.speed = speed;
@@ -89,7 +93,7 @@
         this.durability = durability;
         this.intelligence = intelligence;
         this.image = image;
-
+        
         this.power = function () {
             var allPower = this.strength + this.speed + this.agility +
                 this.stamina + this.durability + this.intelligence;
@@ -185,8 +189,8 @@
             elDivCenterCol.innerHTML = "<h3>A tie!</h3>";
             elDivCenterCol.className = "fightTie";
 
-            elScoreLeft.textContent="eg.30";
-            elScoreRight.textContent="eg.20";
+            elScoreLeft.innerHTML=heroAll[randomHero].power();
+            elScoreRight.innerHTML=villainAll[randomVillain].power();
         } else if (heroAll[randomHero].power() > villainAll[randomVillain].power()) {
             console.log("Hero Wins.");
 
@@ -205,8 +209,8 @@
             elDivCenterCol.innerHTML = "<h3>Hero Wins!</h3>";
             elDivCenterCol.className = "fightWin";
 
-            elScoreLeft.textContent="eg.30";
-            elScoreRight.textContent="eg.20";
+            elScoreLeft.innerHTML=heroAll[randomHero].power();
+            elScoreRight.innerHTML=villainAll[randomVillain].power();
 
         } else {
             console.log("Hero Loses!");
@@ -226,8 +230,8 @@
             elDivCenterCol.innerHTML = "<h3>Hero Loses!</h3>";
             elDivCenterCol.className = "fightLose";
 
-            elScoreLeft.textContent="eg.30";
-            elScoreRight.textContent="eg.20";
+            elScoreLeft.innerHTML=heroAll[randomHero].power();
+            elScoreRight.innerHTML=villainAll[randomVillain].power();
         }; // End fnFight()
     }
 }());
