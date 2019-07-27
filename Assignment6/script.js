@@ -10,7 +10,7 @@ var nameReal = "",
     elSuperOrigin = document.getElementById("inSuperOrigin"),
     elCharDisplay = document.getElementById("charsLeft"),
     elShowResult = document.getElementById("divResult"),    
-
+    
     allHeroes = [],
     maxChars = 140,
 
@@ -41,7 +41,7 @@ function fnSaveName() {
     superPower = document.getElementById("inSuperPower").value;
     superOrigin = document.getElementById("inSuperOrigin").value;
 
-    if(localStorage.allHeroes === "" || localStorage.allHeroes === null || localStorage.allHeroes === undefined) {
+    if(localStorage) {
         // if a super hero was never saved
         if(nameReal && nameHero && superPower && superOrigin) {
             // ready to save a hero
@@ -85,22 +85,23 @@ function fnClearForm() {
     document.getElementById("inHeroName").value = "";
     document.getElementById("inSuperPower").value = "";
     document.getElementById("inSuperOrigin").value = "";
+    elShowResult.textContent = "";
 
-    elSuperOrigin.disbaled = false;
+    elSuperOrigin.disabled = false;
     elCharDisplay.textContent = maxChars;
 } // END fnClearForm()
 
+function fnClearReset(){
+    elShowResult.textContent = "";
+
+}
+let counter=maxChars;
 function fnCharCount() {
-    var textEntered,
-        counter,
-        lastKey;
-    
-    textEntered = document.getElementById("inSuperOrigin").value;
-    counter = maxChars - textEntered.length;
+    counter--;
     elCharDisplay.textContent = counter;
 
     if(counter <= 0) {
-        elSuperOrigin.disbaled = true;
+        elSuperOrigin.disabled = true;
     }
 } // END fnCharCount()
 
@@ -133,4 +134,5 @@ elSuperOrigin.addEventListener("keydown", fnCharCount, false);
 elFormHero.addEventListener("keydown", fnChangeForm, false);
 elBtnSave.addEventListener("click", fnSaveName, false);
 elBtnShow.addEventListener("click", fnShowName, false);
+elBtnReset.addEventListener("click",fnClearReset, false);
 }()); 

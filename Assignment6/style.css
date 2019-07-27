@@ -1,0 +1,49 @@
+#formHero {
+    margin: auto;
+    padding: 1em;
+    width: 50%;
+    background: #000;
+    color: #fff;
+}
+
+label {
+    width: 6em;
+    display: block;
+    float: left;
+    margin-right: 1em;
+    
+   
+    
+}
+br{
+    margin-bottom: 20px;
+}
+#both{
+    clear: both;
+}
+
+input[type=button],
+input[type=reset] {
+    float: right;
+    margin: 0.25em;
+    
+}
+
+.tableStyle,
+.tableStyle th,
+.tableStyle td {
+    width: 85%;
+    border: 1px solid black;
+    table-layout: fixed;
+}
+#btnSave, #btnShow, #btnReset{
+    height: 2em;
+    background: plum;
+    border-radius: 6px;
+    border-color: palevioletred;
+}
+
+.inputBox{
+    height: 2em;
+    width: 20em;
+}
