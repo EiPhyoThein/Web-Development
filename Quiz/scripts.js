@@ -30,6 +30,31 @@ const questions = [
         options: ["200", "403", "404", "500"],
         answer: "404"
     },
+    {
+        question: "Javascript object can have its own in ",
+        options: ["Properties & variable", "function & Method & Events", "Properties & Events & Methods", "type & constanst static"],
+        answer: "Properties & Events & Methods"
+    },
+    {
+        question: "How many ways to create object in Javascript ",
+        options: ["2", "3", "4","5"],
+        answer: "2"
+    },
+    {
+        question: "Anonymous Functions  can call before implementation in Javascript ",
+        options: ["Yes, can", "No, can't", "can since ES5", "can but ES6"],
+        answer: "No, can't"
+    },
+    {
+        question: "return from multiple elements selectors is  ",
+        options: ["Element", "NodeList", "NodeMethod", "Id"],
+        answer: "NodeList"
+    },
+    {
+        question: "How many type of NodeList?  ",
+        options: ["2", "3", "4", "5"],
+        answer: "2"
+    },
 ];
 
 // initialize variables
@@ -75,11 +100,11 @@ function load_question() {
         prompt_restart();
         return;
     }
+    
+    //ask the question
     qNum=question_number+1;
     questionText='<h2>' + qNum + '.   '+ questions[question_number].question+ '</h2> ' ;
-
-
-   document.querySelector("#question").innerHTML =questionText ;
+    document.querySelector("#question").innerHTML =questionText ;
     const options = document.querySelector("#options");
     options.innerHTML = "";
     for (const option of questions[question_number].options) {
