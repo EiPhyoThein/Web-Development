@@ -1,3 +1,4 @@
+//create questions database
 const questions = [
     {
         question: "How many lessons are there in JS & JQuery book?",
@@ -36,18 +37,49 @@ let question_number = 0;
 let correct = 0;
 let frequency = 3;
 
+//start questionary when document load
 document.addEventListener("DOMContentLoaded", () => {
     restart();
 });
 
+function restart() {
+    question_number = 0;
+    correct = 0;
+    originText=document.querySelector("#qTitle").innerHTML;
+    document.querySelector("#qTitle").innerHTML=originText + '<span style="color: red;">  * </span>'  ;
+
+    update_score_display();
+    shuffleArray(questions);
+    questions.forEach( question => {
+        shuffleArray(question.options);
+    });
+    load_question();
+}
+
+function update_score_display() {
+    document.querySelector("#correct").innerHTML = `${correct} of ${question_number}`;
+}
+
+//every after game, shuffle all questions & their choices
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+}
+
+//when restart question, reduce the frequency and show question & their options
 function load_question() {
     if (question_number >= questions.length) {
         frequency--;
         prompt_restart();
         return;
     }
+    qNum=question_number+1;
+    questionText='<h2>' + qNum + '.   '+ questions[question_number].question+ '</h2> ' ;
 
-    document.querySelector("#question").innerHTML = questions[question_number].question;
+
+   document.querySelector("#question").innerHTML =questionText ;
     const options = document.querySelector("#options");
     options.innerHTML = "";
     for (const option of questions[question_number].options) {
@@ -67,11 +99,7 @@ function load_question() {
         }
     });
 }
-
-function update_score_display() {
-    document.querySelector("#correct").innerHTML = `${correct} of ${question_number}`;
-}
-
+//finish one round, test the frequency and  if not full frequency, restart button appear. If full,  show Congratulations message.
 function prompt_restart() {
     document.querySelector("#question").innerHTML = "Quiz done!";
     const options = document.querySelector("#options");
@@ -83,22 +111,7 @@ function prompt_restart() {
     }
 }
 
-function restart() {
-    question_number = 0;
-    correct = 0;
-    update_score_display();
-    shuffleArray(questions);
-    questions.forEach( question => {
-        shuffleArray(question.options);
-    });
-    load_question();
-}
 
 // shuffle questions and options each question
-function shuffleArray(array) {
-    for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-    }
-}
+
 
