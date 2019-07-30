@@ -55,6 +55,26 @@ const questions = [
         options: ["2", "3", "4", "5"],
         answer: "2"
     },
+    {
+        question: "How many ways an event to an element?  ",
+        options: ["2", "3", "7", "5"], 
+        answer: "3"
+    },
+    {
+        question: "Event listeners were introduced in  ",
+        options: ["DOM", "DOM level2", "DOM level5", "DOM Level6"], 				
+        answer: "DOM level2"
+    },
+    {
+        question: "When users move out of the text input, it loses focus. This is called what event  ",
+        options: ["change", "submit", "blur", "keyup"], 							
+        answer: "blur"
+    },
+    {
+        question: "If content come from any untrusted sources, what way should use to add html.  ",
+        options: ["document.write()", "element.innerHTML", "element.textContent", "console.log()"], 											
+        answer: "element.textContent"
+    },
 ];
 
 // initialize variables
