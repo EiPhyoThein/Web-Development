@@ -16,9 +16,14 @@ const questions = [
         answer: "13"
     },
     {
-        question: "What the number of events in FORM EVENTS?",
+        question: "How many events in FORM EVENTS?",
         options: ["6", "7", "8", "9"],
         answer: "8"
+    },
+    {
+        question: "How many event types in Javascrpt?",
+        options: ["6", "7", "8", "9"],
+        answer: "6"
     },
     {
         question: "What type of loop will always execute at least once?",
@@ -36,7 +41,7 @@ const questions = [
         answer: "Properties & Events & Methods"
     },
     {
-        question: "How many ways to create object in Javascript ",
+        question: "How many ways to create an object in Javascript ",
         options: ["2", "3", "4","5"],
         answer: "2"
     },
@@ -56,7 +61,7 @@ const questions = [
         answer: "2"
     },
     {
-        question: "How many ways an event to an element?  ",
+        question: "How many ways to bind an event to an element?  ",
         options: ["2", "3", "7", "5"], 
         answer: "3"
     },
@@ -92,7 +97,6 @@ function restart() {
     correct = 0;
     originText=document.querySelector("#qTitle").innerHTML;
     document.querySelector("#qTitle").innerHTML=originText + '<span style="color: red;">  * </span>'  ;
-
     update_score_display();
     shuffleArray(questions);
     questions.forEach( question => {
@@ -129,12 +133,16 @@ function load_question() {
     options.innerHTML = "";
     for (const option of questions[question_number].options) {
         options.innerHTML += `<button class="option">${option}</button>`;
+       
     }
 
     document.querySelectorAll(".option").forEach(option => {
         option.onclick = () => {
             if (option.innerHTML === questions[question_number].answer) {
+                document.querySelector("#ansImg").innerHTML = '<img src="t.png"></img>';
                 correct++;
+            }else{
+                document.querySelector("#ansImg").innerHTML = '<img src="f.png"></img>';
             }
             question_number++;
 

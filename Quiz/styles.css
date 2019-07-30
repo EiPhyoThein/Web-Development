@@ -1,11 +1,27 @@
 body {
     text-align: center;
     font-family: sans-serif;
+    color: blue;
 }
 
 button {
     font-size: 18px;
     padding: 15px;
     margin: 10px;
-    background-color: #e7e7e7;
+    background-color: skyblue;
+    color: blue;
+    border-radius: 5px;
+    }
+
+button:hover{
+    background-color: aqua;
+
+}
+img{
+    width: 100px;
+    height: 100px;
+}
+#ansImg{
+    margin-top: 2em;
+    margin-bottom: 2em;
 }
