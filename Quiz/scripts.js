@@ -83,9 +83,9 @@ const questions = [
 ];
 
 // initialize variables
-let question_number = 0;
-let correct = 0;
-let frequency = 3;
+var question_number = 0;
+var correct = 0;
+var frequency = 3;
 
 //start questionary when document load
 document.addEventListener("DOMContentLoaded", () => {
@@ -94,9 +94,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function restart() {
     question_number = 0;
-    correct = 0;
-    originText=document.querySelector("#qTitle").innerHTML;
-    document.querySelector("#qTitle").innerHTML=originText + '<span style="color: red;">  * </span>'  ;
+    correct = 0;    
+    //originText=document.querySelector("#qTitle").innerHTML;
+    //document.querySelector("#qTitle").innerHTML=originText + '<span style="color: red;">  * </span>'  ;
     update_score_display();
     shuffleArray(questions);
     questions.forEach( question => {
@@ -116,9 +116,17 @@ function shuffleArray(array) {
         [array[i], array[j]] = [array[j], array[i]];
     }
 }
-
 //when restart question, reduce the frequency and show question & their options
 function load_question() {
+    round1 = document.getElementById('roundOne');
+    round2 = document.getElementById('roundTwo');
+    round3 = document.getElementById('roundThree');
+    
+    switch(frequency){
+        case 3: round1.src = "green.png"; break;
+        case 2: round2.src = "green.png"; break;
+        case 1: round3.src = "green.png"; break;
+    }
     if (question_number >= questions.length) {
         frequency--;
         prompt_restart();
