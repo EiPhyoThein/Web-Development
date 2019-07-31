@@ -168,7 +168,10 @@ function prompt_restart() {
         options.innerHTML = `<button onclick="restart()">Restart</button>`;
     } else {
         document.querySelectorAll("div")[1].innerHTML = `<h2>Thank you.</h2>`;
-        options.innerHTML = `<h1>Congratulation!</h1>`;
+        options.innerHTML = `<img src="congratulation.jpg">`;
+        
+        document.querySelector("#qGroup").innerHTML = '<img src="congratulation.jpg">';
+        
     }
 }
 
