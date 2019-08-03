@@ -17,9 +17,9 @@
     
     // Define Arrays to hold the Droid Types and Droid Pictures
     var droidType = ["Astromech", "Battle", "Interrogation",
-                    "Medical", "Protocol", "Scout"],
+                    "Medical", "Protocol", "Scout","FX-7","R3-S6"],
         droidPic = ["astromech.png", "battle.png", "interrogation.png",
-                    "medical.png", "protocol.png", "scout.png"];
+                    "medical.png", "protocol.png", "scout.png","FX-7.jpg","R3-S6.png"];
 
     // Function to clear the Form and perform other cleanup actions
     function fnClearForm() {
@@ -77,9 +77,10 @@
     function fnDroidNameGen(n1, n2, dob) {
         // Starting at the 5 position and going to the 7th, slice the Month portion
         // of the Date input, then convert it to an Integer, and save it to a Variable
-        var no = parseInt(dob.slice(5, 7), 10);
+        var no = parseInt(dob.slice(5, 7), 16);
         // Create a Variable to hold the current Droid Name
         var myDroid = "";
+        console.log(no);
 
         // If the Date provided is NOT in the format 1968-06-12, it's Not a Number, so...
         if(isNaN(no)) {
@@ -123,12 +124,12 @@
                 break;
 
             case 6:
-                console.log("BT-1");
-                myDroid = n1.slice(0, 2).toUpperCase() + "-" + no;
+                console.log("R3-S6");
+                myDroid = n1.slice(0, 1).toUpperCase()  + "3 -" + n2.slice(0,1).toUpperCase() + no;
                 break;
             
             case 7:
-                console.log("BT-1");
+                console.log("FX-7");
                 myDroid = n1.slice(0, 2).toUpperCase() + "-" + no;
                 break;
 

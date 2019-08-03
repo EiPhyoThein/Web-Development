@@ -118,12 +118,12 @@ $(function () {
                 break;
 
             case 6:
-                console.log("BT-1");
-                myDroid = n1.slice(0, 2).toUpperCase() + "-" + no;
+                console.log("R3-S6");
+                myDroid = n1.slice(0, 1).toUpperCase()  + "3 -" + n2.slice(0,1).toUpperCase() + no;
                 break;
-
+            
             case 7:
-                console.log("BT-1");
+                console.log("FX-7");
                 myDroid = n1.slice(0, 2).toUpperCase() + "-" + no;
                 break;
 
