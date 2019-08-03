@@ -1,0 +1,15 @@
+1. BT-1		astromech droids
+2. R2-D2	astromech droid
+3. C-3PO	Protocol droid
+4. 4-LOM	protocol droid
+5. R5-G8	astromech droid
+6. R3-S6	astromech droid
+7. FX-7		medical droid	
+8. IG-88	battle droids
+9. IT-O9	Interrogation
+10. C1-10P	astromech droid
+11. BAF-101	Scout Droid	
+12. K-2SO
+13. 0-0-0
+
+
