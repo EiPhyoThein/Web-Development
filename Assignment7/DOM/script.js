@@ -17,9 +17,9 @@
     
     // Define Arrays to hold the Droid Types and Droid Pictures
     var droidType = ["Astromech", "Battle", "Interrogation",
-                    "Medical", "Protocol", "Scout","FX-7","R3-S6"],
+                    "Medical", "Protocol", "Scout"],
         droidPic = ["astromech.png", "battle.png", "interrogation.png",
-                    "medical.png", "protocol.png", "scout.png","FX-7.jpg","R3-S6.png"];
+                    "medical.png", "protocol.png", "scout.png"];
 
     // Function to clear the Form and perform other cleanup actions
     function fnClearForm() {
@@ -37,9 +37,19 @@
         if((valInFirst !== "") && (valInLast !== "") && (valInDOB !== "")) {
             // Hide the Error Message Div if NO errors
             elErrorMsg.style.display = "none";
-
+           
+            //Droid Type
+            var mo= parseInt(valInDOB.slice(5, 7), 10);
+            if(mo===1 || mo===2 || mo===5 || mo===6 || mo===10)  {  var Droid=0;   }
+            else if(mo==8 ) { var Droid=1; }
+            else if(mo==9)  { var Droid=2}
+            else if(mo==7)  { var Droid=3}
+            else if(mo==3 || mo==4)  { var Droid=4}
+            else if(mo==11)  { var Droid=5}
+            else {var Droid=4}
+                
             // Generate a Random Number based on the number of Droid Types
-            var randomDroid = Math.floor(Math.random() * droidType.length);
+            //var randomDroid = Math.floor(Math.random() * droidType.length);
 
             // Display the First and Last Names the User input
             elNameYou.innerHTML = "Your Real Name: " + valInFirst + " " + valInLast;
@@ -49,27 +59,29 @@
             
             // Check if a Droid Name requires "A" or "An" grammer
             // "An" grammer needed for Droid Types of 0 and 2
-            if((randomDroid === 0) || (randomDroid === 1)) {
+            if((Droid == 0) || (Droid == 2)) {
                 // Display the Droid Type based on the Random Number
-                elNameType.innerHTML = "You are an " + droidType[randomDroid] + "Droid.";
+                elNameType.innerHTML = "You are an " + droidType[Droid] + " Droid.";
                 // Display the Droid Picture in the empty <img>
-                elDroidPic.src = droidPic[randomDroid];
+                elDroidPic.src = droidPic[Droid];
             } else {
                 // "A" grammer needed for Droid Types 1, 3, 4, and 5
                 // Display the Droid Type based on the Random Number
-                elNameType.innerHTML = "You are a " + droidType[randomDroid] + "Droid.";
+                elNameType.innerHTML = "You are a " + droidType[Droid] + " Droid.";
                 // Display the Droid Picture in the empty <img>
-                elDroidPic.src = droidPic[randomDroid];
+                elDroidPic.src = droidPic[Droid];
             }
             // Clear the Form so a User can generate a new Droid Name
             fnClearForm();
         } else {
+            clearShowMsg();
             // or Else the Input Fields ARE empty, so display an Error Message
             elErrorMsg.innerHTML = "Please enter all fields!";
             // Show the Error Message Div if YES errors
             elErrorMsg.style.display = "block";
-            // Clear the Form so a User can generate a new Droid Name
-            fnClearForm();
+            
+            
+
         }
     } // END of fnGo() function
 
@@ -77,7 +89,7 @@
     function fnDroidNameGen(n1, n2, dob) {
         // Starting at the 5 position and going to the 7th, slice the Month portion
         // of the Date input, then convert it to an Integer, and save it to a Variable
-        var no = parseInt(dob.slice(5, 7), 16);
+        var no = parseInt(dob.slice(5, 7), 10);
         // Create a Variable to hold the current Droid Name
         var myDroid = "";
         console.log(no);
@@ -139,8 +151,8 @@
                 break;
 
             case 9:
-                console.log("EV-9D9");
-                myDroid = n1.slice(0, 1).toUpperCase() + n2.slice(0, 1).toUpperCase() + "-" + no + "D" + no;
+                console.log("IT-O9");
+                myDroid = n1.slice(0, 2).toUpperCase() + "-"+n2.slice(0, 1).toUpperCase()  + no;
                 break;
 
             case 10:
@@ -150,15 +162,11 @@
                 break;
 
             case 11:
-                console.log("B11");
-                myDroid = n1.slice(0, 1).toUpperCase() + no;
+                console.log("BAF-101");
+                myDroid = n1.slice(0, 3).toUpperCase() + "- 101";
                 break;
 
-            case 12:
-                console.log("K-2SO");
-                myDroid = n1.slice(0, 1).toUpperCase() +
-                        "-2" + n2.slice(0, 2).toUpperCase();
-                break;            
+                    
         
             default:
                 console.log("0-0-0");
@@ -169,9 +177,18 @@
         return myDroid;
     } // END of fnDroidNameGen() function
 
+function clearShowMsg(){
+    elErrorMsg.innerHTML = '',
+    elNameYou.innerHTML  = '',
+    elNameDroid.innerHTML= '',
+    elNameType.innerHTML = '',
+    elDroidPic.src = '';
+
+}
+
     // Event Handlers
     // When the Go Button is clicked, run the fnGo() function
     elBtnGo.addEventListener("click", fnGo, false);
     // When th Cleaqr Button is clicked, run the fnClearForm() function
-    elBtnClear.addEventListener("click", fnClearForm, false);    
+    elBtnClear.addEventListener("click", (fnClearForm,clearShowMsg), false);    
 }());
