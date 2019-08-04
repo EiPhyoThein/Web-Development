@@ -1,0 +1,41 @@
+#titleGroup{
+    text-align: center;
+    margin: auto;
+    padding-bottom: 0;
+}
+#title{
+    color: blue;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#reg{
+    color: #08f;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+form{
+    width: 75%;
+    margin: auto;
+    color: blue;
+}
+
+label{
+    display: block;
+    float: left;
+    width: 8em;
+    
+    
+}
+
+input, select{
+    margin-bottom: 10px;
+    height: 25px;
+    color: blue;
+    width: 25em;
+}
+textarea{
+    margin-bottom: 10px;
+}
+
+
+    
