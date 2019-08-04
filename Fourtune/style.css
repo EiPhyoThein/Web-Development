@@ -1,0 +1,30 @@
+
+fieldset { 
+    
+    padding-top: 20px;
+    padding-left: 3em;
+ }
+body{
+    
+    width: 60%;
+    margin: auto;
+    background: black;
+    color: white;
+}
+#inDOB{
+    width: 10em;
+    height: 35px;
+    padding-left: 2em;;
+    border-radius: 20px;
+    color: red;
+    font-size: 20px;
+}
+#btnCalculate, #btnClear{
+    width: 10em;
+    height: 35px;
+    color: blue;
+    background: skyblue;
+    border-radius: 5px;
+    margin-left: 35px;
+}
+

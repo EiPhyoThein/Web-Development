@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<meta charset="utf-8">
+    <title>ေဗဒင္</title>
+    <link rel="stylesheet" href="style.css">
+	
+<body>
+	<h1>ဂဏန္းေဗဒင္</h1>
+	<form id="swForm"> <!-- Where User info is collected -->
+	<fieldset>
+		<legend>Fill your birthdate to calculate your fortune.</legend>
+		<p>မင္းဟာ..လေတြရဲ့. 1st, 10th, 19th, 28th မွာ ေမြးဖြားခဲ့မယ္ဆိုရင္.. == မင္းဟာ.. နံပါတ္ (၁) သမား...</p>
+		<p>2nd, 11th, 20th, 29th မွာ ေမြးဖြားခဲ့မယ္ဆိုရင္.. == နံပါတ္ (၂) သမား...	</p>
+		<p>3rd, 12th, 21st, 30th မွာ ေမြးဖြားခဲ့မယ္ဆိုရင္.. == နံပါတ္ (၃) သမား...</p>
+		<p>4th, 13th, 22nd, 31st မွာ ေမြးဖြားခဲ့မယ္ဆိုရင္.. == နံပါတ္ (၄) သမား...</p>
+		<p>5th, 14th, 23rd မွာ ေမြးဖြားခဲ့မယ္ဆိုရင္.. == နံပါတ္ (၅) သမား...</p>
+		<p>6th, 15th, 24th မွာ ေမြးဖြားခဲ့မယ္ဆိုရင္.. == နံပါတ္ (၆) သမား...</p>
+		<p>7th, 16th, 25th မွာ ေမြးဖြားခဲ့မယ္ဆိုရင္.. == နံပါတ္ (၇ သမား...</p>
+		<p>8th, 17th, 26th မွာ ေမြးဖြားခဲ့မယ္ဆိုရင္.. == နံပါတ္ (၈ သမား...</p>
+		<p>9th, 18th, 27th မွာ ေမြးဖြားခဲ့မယ္ဆိုရင္.. == နံပါတ္ (၉) သမား...</p>		
+		<label for="inDOB">Birthday: </label>
+		<input type="date" name="inDOB" id="inDOB"><br>
+	</fieldset>
+	<p>
+		<input type="button" value="Calculate" id="btnCalculate" class="btn">
+		<input type="button" value="Clear" id="btnClear" class="btn">
+	</p>
+	</form>
+	<div id="divShow">
+		<div id="errorMsg">&nbsp;</div>
+		<div id="title">&nbsp;</div>
+		<div id="detail">&nbsp;</div>
+	</div>
+	<script src="script.js"></script>
+</body>
+<!-- 
+    Name:           Ei Phyo Thein
+    Email:          eiphyothein@gmail.com
+    Project:        Number fortune
+    Description:    Using jQuery, create a program that lets a user become a Droid
+    Date:           August 03, 2019
+-->
+</html>
