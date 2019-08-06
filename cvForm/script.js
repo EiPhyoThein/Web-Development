@@ -63,9 +63,8 @@
         remark=elRemark.value;
         var aStudent=new student(name,date,sex,education,parent,address,phone,course,days,time,startDate,remark);
         allStudents.push(aStudent);
-        var jsonData=JSON.stringify(aStudent);
-        var fs=require('fs');
-        fs.writeFile('a.txt',JSON.stringify(aStudent));
+        clearForm();
+        
              
     }
     function show(){
@@ -74,6 +73,9 @@
             console.log(allStudents[i]);
             
         }
+    }
+    function clearForm(){
+        elForm.reset();
     }
 
     elSave.addEventListener("click",Save,false);
