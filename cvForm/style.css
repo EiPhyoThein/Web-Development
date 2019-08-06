@@ -1,7 +1,19 @@
-#titleGroup{
-    text-align: center;
+body{
+    background: #dfb9f7;
+}
+form{
+    width: 50%;
+    padding-left: 10%;
     margin: auto;
-    padding-bottom: 0;
+    color: blue;    
+}
+#titleGroup{
+    text-align: center; 
+    margin-bottom: 10px;   
+}
+#title,#reg,img{    
+    margin: 0;
+    padding: 0;
 }
 #title{
     color: blue;
@@ -11,30 +23,37 @@
 #reg{
     color: #08f;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
-form{
-    width: 75%;
-    margin: auto;
-    color: blue;
-}
+}   
 
 label{
     display: block;
     float: left;
-    width: 8em;
-    
-    
+    width: 8em;   
 }
 
-input, select{
+input{
     margin-bottom: 10px;
     height: 25px;
     color: blue;
     width: 25em;
 }
+select{
+    margin-bottom: 10px;
+    height: 25px;
+    color: blue;
+    width: 25.5em;
+}
 textarea{
     margin-bottom: 10px;
+}
+#save{
+    margin-left: 36%;
+    width: 5em;
+    height: 40px;
+    background: blue;
+    color: skyblue;
+    font-size: 20px;
+    border-radius: 10px;
 }
 
 

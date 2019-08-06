@@ -7,7 +7,7 @@
     <body>
         <div id="titleGroup">
                 <h1 id="title">ME Computer Centre</h1>
-                <img src="flower1.jpg" />
+                <img src="flower1.png" />
                 <h2 id="reg">Registration Form</h2>
         </div>
         <form id="cv">
@@ -18,9 +18,9 @@
             <input type="date" name="dob" id="dob"><br>
 
             <label for="sex">Sex</label>
-            <select name="sex">
-                <option value="male">Male</option>
-                <option value="female">Female</option>
+            <select name="sex" id="sex">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
             </select><br>
 
             <label for="edu">Education</label>
@@ -30,45 +30,61 @@
             <input type="text"  name="parent" id="parent"><br>
 
             <label for="address">Res: Address</label>
-            <textarea rows="4" cols="40" name="address"></textarea><br>
+            <textarea rows="4" cols="39.95" name="address" id="address"></textarea><br>
 
             <label for="phone">Phone</label>
             <input type="text"  name="phone" id="phone"><br>
 
             <label for="course">Course</label>
-            <select name="course">
-                    <option value="office2016">Office 2016</option>
-                    <option value="dtp">DTP</option>
-                    <option value="graphic">Graphic</option>
-                    <option value="advancedExcel">Advanced Excel</option>
-                    <option value="c++">C++</option>
-                    <option value="java">Java</option>
-                    <option value="python">Python</option>
-                    <option value="ct">Computational Thinking</option>
-                    <option value="c#">C#</option>
-                    <option value="autoCad">AutoCAD</option>
-                    <option value="sketchUp">Sketch Up</option>
-                    <option value="a+">A+</option>
-                </select><br>
+            <select name="course" id="course">
+                <option value="Office 2016">Office 2016</option>
+                <option value="DTP">DTP</option>
+                <option value="Graphic">Graphic</option>
+                <option value="Advanced Excel">Advanced Excel</option>
+                <option value="MYOB">MYOB</option>
+                <option value="C++">C++</option>
+                <option value="Java">Java</option>
+                <option value="Python">Python</option>
+                <option value="Computational Thinking">Computational Thinking</option>
+                <option value="C#">C#</option>
+                <option value="Webdesign">Webdesign</option>
+                <option value="AutoCAD">AutoCAD</option>
+                <option value="Sketch Up">Sketch Up</option>
+                <option value="A+">A+</option>
+                <option valut="Basic for Kids">Basic for Kids</option>
+                <option valut="Office for Kids">Office for Kids</option>
+                <option valut="Drawing for Kids">Drawing for Kids</option>
+                <option valut="Photoshop for Kids">Photoshop for Kids</option>
+                <option valut="Internet for Kids">Internet for Kids</option>
+                <option valut="Programming for Kids">Programming for Kids</option>            
+            </select><br>
 
+            <label for="days">Days</label>
+            <select name="days" id="days">
+                <option value="All Days">All Days</option>
+                <option value="4 Days">4 Days</option>
+                <option value="Weekly">Weekly</option>
+            </select><br>
             <label for="time">Time</label>
-            <select name="time">
-                    <option value="7">7-9 am</option>
-                    <option value="9">9-11 am</option>
-                    <option value="11">11-1 pm</option>
-                    <option value="1">1-3 pm</option>
-                    <option value="3">3-5 pm</option>
-                    <option value="5">5-7 pm</option>
-                </select><br>
+            <select name="time" id="time">
+                <option value="7-9 am">7-9 am</option>
+                <option value="9-11 am">9-11 am</option>
+                <option value="11-1 pm">11-1 pm</option>
+                <option value="1-3 pm">1-3 pm</option>
+                <option value="3-5 pm">3-5 pm</option>
+                <option value="5-7 pm">5-7 pm</option>
+            </select><br>
 
             <label for="startDate">Start Date</label>
             <input type="startDate" name="startDate" id="startDate"><br>
 
             <label for="remark">Remark</label>
-            <textarea rows="4" cols="40" name="remark"></textarea><br>
+            <textarea rows="4" cols="39.95" name="remark" id="remark"></textarea><br>
 
+            <input type="button" value="Save" id="save">
+            <input type="button" value="Show Records" id="show">
 
         </form>
-        
+    <script src="script.js"></script>   
     </body>
 </html>
