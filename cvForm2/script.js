@@ -48,10 +48,7 @@
         this.remark=remark;
 
     }
-    function labelClear(){
-        if(e.value!='') { e.}
-    }
-    elName.addEventListener(blur,labelClear(),false);
+    
     function Save(){
         name=elName.value;
         date=elDate.value;

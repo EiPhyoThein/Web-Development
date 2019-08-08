@@ -95,9 +95,10 @@ input:focus , textarea:focus {
 #save{
     width: 10em;
     float: left;
+    
 }
 #show{
-    float: right;
+    float: left;
     width: 15em;
     
 }
