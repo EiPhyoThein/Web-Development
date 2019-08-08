@@ -48,13 +48,17 @@
         this.remark=remark;
 
     }
+    function labelClear(){
+        if(e.value!='') { e.}
+    }
+    elName.addEventListener(blur,labelClear(),false);
     function Save(){
         name=elName.value;
         date=elDate.value;
         sex=elSex.value;
         education=elEducation.value;
         parent=elParent.value;
-        address=elParent.value;
+        address=elAddress.value;
         phone=elPhone.value;
         course=elCourse.value;
         days=elDays.value;

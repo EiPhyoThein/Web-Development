@@ -61,11 +61,12 @@ label{
     -moz-transition:0.2s ease all; 
     -webkit-transition:0.2s ease all;
 }
-#dateLabel{
+#dateLabel, #courseLabel, #daysLabel, #timeLabel, #startDate{
     position: relative;
     top: 5px;
 }
-input:focus ~ label, textarea:focus ~ label{
+ 
+input:focus ~ label, textarea:focus ~ label, input:valid ~ label, textarea:valid ~ label{
     top:-11px;
     font-size:14px;
     color:#5264AE;
@@ -80,6 +81,7 @@ input:focus , textarea:focus {
  
 #save, #show{
     height: 40px;
+    line-height: 20px;
     background: #bbb;
     color: #757575;
     font-size: 20px;
