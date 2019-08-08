@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CV Form</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+            <div id="titleGroup">
+                <div id="logo"><img src="melog.png"></div>
+                <h2 id="reg">Registration Form</h2>
+            </div>
+            
+            <form id="cv">
+
+            <div class="group">      
+                <input type="text"  name="name" id="name">
+                <span class="bar"></span>
+                <label for="name">Name</label>
+            </div>
+            
+            <div class="group">  
+                <input type="text"  name="edu" id="edu">
+                <span class="bar"></span>
+                <label for="edu">Education</label>
+            </div>
+            
+            <div id="dateGroup">
+                    <label for="dob" id="dateLabel">Date of Birth</label>
+                    <input type="date" name="dob" id="dob"><br>
+            </div>
+            
+            <div id="sexGroup">
+                <label for="sex">Sex</label>
+                <select name="sex" id="sex">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select><br>
+            </div>
+            
+
+            
+            <div class="group">
+                <input type="text"  name="parent" id="parent">
+                <label for="parent">Parent Name</label>
+                <span class="bar"></span>
+            </div> 
+            
+            
+            <div class="group">
+                <textarea rows="4" cols="39.95" name="address" id="address"></textarea>
+                <span class="bar"></span>
+                <label for="address">Res: Address</label>
+            </div> 
+            
+
+            <div class="group">
+                <input type="text"  name="phone" id="phone">  
+                <span class="bar"></span>
+                <label for="phone">Phone</label>
+            </div> 
+            
+            
+
+            <label for="course">Course</label>
+            <select name="course" id="course">
+                <option value="Office 2016">Office 2016</option>
+                <option value="DTP">DTP</option>
+                <option value="Graphic">Graphic</option>
+                <option value="Advanced Excel">Advanced Excel</option>
+                <option value="MYOB">MYOB</option>
+                <option value="C++">C++</option>
+                <option value="Java">Java</option>
+                <option value="Python">Python</option>
+                <option value="Computational Thinking">Computational Thinking</option>
+                <option value="C#">C#</option>
+                <option value="Webdesign">Webdesign</option>
+                <option value="AutoCAD">AutoCAD</option>
+                <option value="Sketch Up">Sketch Up</option>
+                <option value="A+">A+</option>
+                <option valut="Basic for Kids">Basic for Kids</option>
+                <option valut="Office for Kids">Office for Kids</option>
+                <option valut="Drawing for Kids">Drawing for Kids</option>
+                <option valut="Photoshop for Kids">Photoshop for Kids</option>
+                <option valut="Internet for Kids">Internet for Kids</option>
+                <option valut="Programming for Kids">Programming for Kids</option>            
+            </select><br>
+
+            <label for="days">Days</label>
+            <select name="days" id="days">
+                <option value="All Days">All Days</option>
+                <option value="4 Days">4 Days</option>
+                <option value="Weekly">Weekly</option>
+            </select><br>
+            <label for="time">Time</label>
+            <select name="time" id="time">
+                <option value="7-9 am">7-9 am</option>
+                <option value="9-11 am">9-11 am</option>
+                <option value="11-1 pm">11-1 pm</option>
+                <option value="1-3 pm">1-3 pm</option>
+                <option value="3-5 pm">3-5 pm</option>
+                <option value="5-7 pm">5-7 pm</option>
+            </select><br>
+
+            
+            <div class="group">
+                    <input type="startDate" name="startDate" id="startDate">
+                <span class="bar"></span>
+                <label for="startDate">Start Date</label>
+                </div> 
+            
+            
+            <div class="group">
+                <textarea rows="4" cols="39.95" name="remark" id="remark"></textarea>                    
+                <span class="bar"></span>
+                <label for="remark">Remark</label>
+            </div> 
+            
+            <input type="button" value="Save" id="save">
+            <input type="button" value="Show Records on console" id="show">
+            <div id="footer">powerd by ei phyo thein</div>
+        </form>
+    </div>
+    <script src="script.js"></script>   
+    </body>
+</html>
