@@ -25,17 +25,14 @@ $(function(){
             case '+': $result = $num1 + $num2; break;
             case '-': $result = $num1 - $num2; break;
         }
-
-       
+      
         $resultStr=$result.toString();
         $elResult.val($resultStr);
-    
-       
+        
     }
     function fnClear(){  $elForm.reset();   }
         
     $elBtnCal.click(fnCal);
     $elBtnClear.click(fnClear);
-
 
 });

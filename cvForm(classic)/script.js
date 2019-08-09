@@ -48,13 +48,14 @@
         this.remark=remark;
 
     }
+    
     function Save(){
         name=elName.value;
         date=elDate.value;
         sex=elSex.value;
         education=elEducation.value;
         parent=elParent.value;
-        address=elParent.value;
+        address=elAddress.value;
         phone=elPhone.value;
         course=elCourse.value;
         days=elDays.value;
@@ -64,14 +65,11 @@
         var aStudent=new student(name,date,sex,education,parent,address,phone,course,days,time,startDate,remark);
         allStudents.push(aStudent);
         clearForm();
-        
-             
     }
     function show(){
         for(var i = 0; i < allStudents.length; i++)
         {   console.log(i);
             console.log(allStudents[i]);
-            
         }
     }
     function clearForm(){
@@ -80,6 +78,4 @@
 
     elSave.addEventListener("click",Save,false);
     elShow.addEventListener("click",show,false);
-   
-
 }());
