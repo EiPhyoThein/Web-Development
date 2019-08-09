@@ -30,7 +30,8 @@ $(function(){
         $elResult.val($resultStr);
         
     }
-    function fnClear(){  $elForm.reset();   }
+    function fnClear(){  $elForm.trigger('reset');   }
+   
         
     $elBtnCal.click(fnCal);
     $elBtnClear.click(fnClear);
