@@ -1,0 +1,11 @@
+fieldset {
+    width: 10em;
+    margin: 10px;
+    color: blue;
+    padding: 5px;
+}
+#btn, #clear, #sign, #result {
+    color: red;
+    padding: 5px;
+    margin: 5px;
+}
