@@ -5,15 +5,14 @@ $(function(){
     $elForm = $('#form');
     
     function fnCal(){
-        if($('#num1').val() == '')   alert("First Number is blank.");
-            else {
-                    $num1=$('#num1').val();
-                    $num1=parseFloat($num1);    
-                 }
-        if($('#num2').val()== '')   alert("Second Number is blank");
-            else {  $num2=$('#num2').val();
-                    $num2=parseFloat($num2);
-                 }
+        $num1=$('#num1').val();
+        $num2=$('#num2').val();
+        if($num1=='' || $.trim($num1)=='')   { $num1=$('#num1').val(); $num1=0; alert("First Number is blank.");}
+            else    $num1=parseFloat($('#num1').val());
+                    
+                
+        if($(num2)== '' || $.trim($num2)=='')   { $num1=$('#num1').val(); $num1=0; alert("Second Number is blank");}
+            else   $num2=parseFloat($('#num2').val());
 
         $sign=$('#sign').val();
         $result=0;
