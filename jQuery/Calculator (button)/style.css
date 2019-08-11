@@ -1,0 +1,29 @@
+#wrapper{
+    width: 35%;
+    background: black;
+    color: white;
+    margin: auto;
+    padding: 20px 5em;
+    border-color: white;
+
+}
+
+fieldset {
+    margin: 10px;
+    color: white;
+    padding: 5px;
+}
+#numbers{
+    margin-top: 10px;
+}
+#num1, #num2,#sign{
+    height: 26px;
+
+}
+
+#btn, #clear, #sign, #result {
+    color: red;
+    padding: 5px;
+    margin: 5px;
+    
+}
