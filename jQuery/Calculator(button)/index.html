@@ -17,21 +17,26 @@
             <input type="text" id="num2" required >
             
             <div id="numbers">
-                <img src="img/0.png" />
-                <img src="img/1.png" />
-                <img src="img/2.png" />
-                <img src="img/3.png" />
-                <img src="img/4.png" />
-                <img src="img/5.png" />
-                <img src="img/6.png" />
-                <img src="img/7.png" />
-                <img src="img/8.png" />
-                <img src="img/9.png" />
+                <img class="num" src="img/0.png" />
+                <img class="num" src="img/1.png" />
+                <img class="num" src="img/2.png" />
+                <img class="num" src="img/3.png" />
+                <img class="num" id="4num" src="img/4.png" /><br>
+                <img class="num" src="img/5.png" />
+                <img class="num"src="img/6.png" />
+                <img class="num" src="img/7.png" />
+                <img class="num" src="img/8.png" />
+                <img class="num" id="9num" src="img/9.png" />
             </div>
             <input type="button" value="Calculate" id="btnCal">
             <input type="button" value="Clear" id="btnClear"><br>
-            <label for="result">Answer: </label>
-            <input type="text" id="result">
+            
+            
+            <div id="ans">
+                    <input type="text" id="result">
+                    <label for="result"id="ansLabel">Answer </label>
+            </div>
+            
         </form>
 
     </div>        
