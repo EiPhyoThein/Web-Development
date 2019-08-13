@@ -20,13 +20,17 @@ $(function(){
     
     
     function input($textField){
-        if ($elZero.click() ) $textField.val()=$textField.val()+"0";
-        else if ($elOne.click() ) $textField.val()=$textField.val()+"1";
+        if ($elZero.click(function(){
+            $textField.val()=$textField.val()+"0";})
+            ); 
+        else if ($elOne.click(function(){
+            $textField.val()=$textField.val()+"1";})
+            ) ;
     }
     
 
 
-    $elNum1.on(click,input($elNum1));
+    $elNum1.on("click", {$textField: $elNum1},input);
     
     
 
