@@ -1,0 +1,29 @@
+body {
+    text-align: center;
+    font-family: sans-serif;
+    color: blue;
+}
+
+button {
+    font-size: 18px;
+    padding: 15px;
+    margin: 10px;
+    background-color: skyblue;
+    color: blue;
+    border-radius: 5px;
+    }
+
+button:hover{
+    background-color: aqua;
+
+}
+#ansImg{
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+#round{
+    position: absolute;
+    margin-left: 30px;
+    margin-top: 30px;
+}

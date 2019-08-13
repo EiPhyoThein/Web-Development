@@ -1,38 +1,40 @@
 $(function(){
-    $elBtnCal = $("#btnCal");
-    $elBtnClear = $('#btnClear');
-    $elResult=$('#result');
-    $elForm = $('#form');
+    $elForm = $("#form");
+    $elNum1=$("#num1");
+    $elNum2=$("#num2");
+    $elSign=$("#sign");
+    $elZero=$("#zero");
+    $elOne=$("#one");
+    $elTwo=$("#two");
+    $elThree=$("#three");
+    $elFour=$("#four");
+    $elFive=$("#five");
+    $elSix=$("#six");
+    $elSeven=$("#seven");
+    $elEight=$("#eight");
+    $elNine=$("#nine");
+    $elBtnCal=$("#btnCal");
+    $elBtnClear=$("#btnClear");
+    $elAns=$("#ans");
+    $elAnsLabel=$("#ansLabel");
     
-    function fnCal(){
-        $num1=$('#num1').val();
-        $num2=$('#num2').val();
-        if($num1=='' || $.trim($num1)=='')   { $num1=$('#num1').val(); $num1=0; alert("First Number is blank.");}
-            else    $num1=parseFloat($('#num1').val());
-                    
-                
-        if($(num2)== '' || $.trim($num2)=='')   { $num1=$('#num1').val(); $num1=0; alert("Second Number is blank");}
-            else   $num2=parseFloat($('#num2').val());
-
-        $sign=$('#sign').val();
-        $result=0;
-        
-        switch($sign){
-            case '*': $result = $num1* $num2; break;
-            case '/':  if($num2 == 0 ) { $result=0; alert("Zero Division Error"); break;}
-                        else {  $result = $num1 / $num2;  break; }   
-            case '+': $result = $num1 + $num2; break;
-            case '-': $result = $num1 - $num2; break;
-        }
-      
-        $resultStr=$result.toString();
-        $elResult.val($resultStr);
-        
+    function btnHover{
+        if ( $elZero.hover() ) { $elZero.src="img/hover0.png"; }
     }
-    function fnClear(){  $elForm[0].reset();   }
-   
-        
-    $elBtnCal.click(fnCal);
-    $elBtnClear.click(fnClear);
+    
+    function input(textField){
+        if ($elZero.click() ) textField.val()=textField.val()+"0";
+        else if ($elOne.click() ) textField.val()=textField.val()+"1";
+    }
+    
+
+
+
+    while(!$elBtnCal.click() || $elBtnClear.click())
+    {
+        if($elNum1:focus) input($elNum1);
+    if($elNum2:focus) input($elNum2);
+    }
+    
 
 });
