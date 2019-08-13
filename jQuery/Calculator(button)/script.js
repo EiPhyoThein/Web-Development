@@ -18,23 +18,16 @@ $(function(){
     $elAns=$("#ans");
     $elAnsLabel=$("#ansLabel");
     
-    function btnHover{
-        if ( $elZero.hover() ) { $elZero.src="img/hover0.png"; }
-    }
     
-    function input(textField){
-        if ($elZero.click() ) textField.val()=textField.val()+"0";
-        else if ($elOne.click() ) textField.val()=textField.val()+"1";
+    function input($textField){
+        if ($elZero.click() ) $textField.val()=$textField.val()+"0";
+        else if ($elOne.click() ) $textField.val()=$textField.val()+"1";
     }
     
 
 
-
-    while(!$elBtnCal.click() || $elBtnClear.click())
-    {
-        if($elNum1:focus) input($elNum1);
-    if($elNum2:focus) input($elNum2);
-    }
+    $elNum1.on(click,input($elNum1));
+    
     
 
 });
