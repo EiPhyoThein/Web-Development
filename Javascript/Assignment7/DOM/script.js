@@ -63,13 +63,15 @@
                 // Display the Droid Type based on the Random Number
                 elNameType.innerHTML = "You are an " + droidType[Droid] + " Droid.";
                 // Display the Droid Picture in the empty <img>
-                elDroidPic.src = droidPic[Droid];
+                let drName=droidPic[Droid];
+                elDroidPic.src = 'img/'+drName;
             } else {
                 // "A" grammer needed for Droid Types 1, 3, 4, and 5
                 // Display the Droid Type based on the Random Number
                 elNameType.innerHTML = "You are a " + droidType[Droid] + " Droid.";
                 // Display the Droid Picture in the empty <img>
-                elDroidPic.src = droidPic[Droid];
+                let drName=droidPic[Droid];
+                elDroidPic.src='img/'+drName;
             }
             // Clear the Form so a User can generate a new Droid Name
             fnClearForm();
