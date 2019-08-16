@@ -1,20 +1,21 @@
 (function() {
     "use strict";
+    
 
     var $elBtnGetChar = $("#btnGetChar"),
         $elDivLeftCol = $("#divLeftCol"),
         $elDivRightCol = $("#divRightCol");
-
-    var fileConnection = new XMLHttpRequest();
+       
+    var xhr = new XMLHttpRequest();
 
     function fnGetChar() {
         console.log("fnGetChar() STARTS");
 
-        fileConnection.open("GET", "characters.json", true);
-        fileConnection.send(null);
+        xhr.open("GET", "characters.json", true);
+        xhr.send(null);
 
-        fileConnection.onload = function() {
-            var charObj = JSON.parse(fileConnection.responseText);
+        xhr.onload = function() {
+            var charObj = JSON.parse(xhr.responseText);
             var randomChar = Math.floor(Math.random() * charObj.allChars.length);
             var strName = "",
                 strStats = "";
@@ -34,6 +35,8 @@
                         </p>`;
             
             $elDivRightCol.html(strStats).hide().delay(250).fadeIn(1750);
+            
+    
         }; // END onload (after successful connection to the file)
     } // END fnGetChar()
 

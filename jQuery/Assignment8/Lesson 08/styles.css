@@ -6,18 +6,27 @@ body {
 }
 
 #divTwoCol {
-    width: 100%;
+    width: 100%;  
+    
 }
 
 #divLeftCol {
-    float: right;
-    width: 50%;
+    float: left;
+    width: 45%;
     text-align: center;
     color: red;    
+}
+#divLeftCol img{
+    width: 100%;
+
 }
 
 #divRightCol {
     float: right;
-    width: 50%;
+    width: 45%;
     color: blue;
+    padding-left: 10px;
+    
+    
+     
 }
