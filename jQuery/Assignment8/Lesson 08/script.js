@@ -1,13 +1,25 @@
 (function() {
-    "use strict";
-    
+    "use strict";   
 
     var $elBtnGetChar = $("#btnGetChar"),
         $elDivLeftCol = $("#divLeftCol"),
         $elDivRightCol = $("#divRightCol");
        
     var xhr = new XMLHttpRequest();
+    $(window).resize(function(){
+        var w = window.innerWidth;
+            console.log(w);
+            if(w<600) $elDivRightCol.css(
+                {clear: 'both',
+                'font-size': '18px'});
+            if(w>600) $elDivRightCol.css(
+                {float: 'left',
+                clear:'none',
+                width: '45%',
+                'font-size': '1.5em'}); 
 
+            console.log(w);
+    })
     function fnGetChar() {
         console.log("fnGetChar() STARTS");
 
@@ -36,6 +48,7 @@
             
             $elDivRightCol.html(strStats).hide().delay(250).fadeIn(1750);
             
+
     
         }; // END onload (after successful connection to the file)
     } // END fnGetChar()
