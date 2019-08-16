@@ -22,11 +22,10 @@ body {
 }
 
 #divRightCol {
-    float: right;
+    float: left;
+    clear: none;
     width: 45%;
     color: blue;
-    
-    
-    
+    padding-left: 10px;   
      
 }

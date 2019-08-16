@@ -5,6 +5,7 @@
         $(function () {
             var textBoxes = $('input[type="text"]');
             textBoxes.focus(function () {
+                console.log(textBoxes);
                 var helpDiv = $(this).attr('id') + 'HelpDiv';
                 $('#' + helpDiv).load('Help.html #' + helpDiv);
             });
