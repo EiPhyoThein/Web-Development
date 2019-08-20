@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>JavaScript &amp; jQuery - Chapter 8: Ajax &amp; JSON - JSONP</title>
+    <link rel="stylesheet" href="css/c08.css" />
+  </head>
+  <body>
+
+    <header><h1>THE MAKER BUS</h1></header>
+    <h2>The bus stops here</h2>
+    <section id="content"></section>
+
+    <!-- 2. function that will process the JSON data that the server sends.-->
+    <script src="js/data-jsonp.js"></script>
+
+    <!-- 1. request the JSON data from the remote server -->
+    <script src="http://htmlandcssbook.com/js/jsonp.js?callback=showEvents"></script>
+  </body>
+</html>
