@@ -6,22 +6,11 @@
     <script type="text/javascript">
         $(function () {
             // Creating a JSON array object
-            var employeesJSON = [
-                {
-                    "firstName": "Todd",
-                    "lastName": "Grover",
-                    "gender": "Male",
-                    "salary": 50000
-                },
-                {
-                    "firstName": "Sara",
-                    "lastName": "Baker",
-                    "gender": "Female",
-                    "salary": 40000
-                }];
-
+            var employeesJSON ='[{"firstName": "Todd",  "lastName": "Grover",                    "gender": "Male",                    "salary": 50000                },                {                    "firstName": "Sara",                    "lastName": "Baker",                    "gender": "Female",                    "salary": 40000                }]';
             // $('#resultDiv').html(employeesJSON[1].firstName);
             $('#resultDiv').html(employeesJSON[0].lastName);
+            var ept=JSON.parse(employeesJSON);
+            console.log(ept);
         });
     </script>
 </head>
