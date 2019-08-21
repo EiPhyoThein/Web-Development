@@ -8,7 +8,6 @@ $('#selector').append(vote);
 $('#selector a').on('click', function(e) {
   e.preventDefault();
   var queryString = 'vote=' + $(e.target).attr('id');
-  console.log(e.target);
   $.get('/php/votes.php', queryString, function(data) {
     $('#selector').html(data);
   });
