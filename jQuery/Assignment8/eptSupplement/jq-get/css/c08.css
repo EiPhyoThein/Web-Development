@@ -168,9 +168,7 @@ input[type=submit]:hover {
 #sessions li .time {
   display: inline-block;
   width: 60px;}
-#details div {
-  text-align: left;
-  padding: 1.8em 0em 0em 1em;}
+
 #details p {
   padding: 0;
   margin: 0.8em 0 0 0;}
