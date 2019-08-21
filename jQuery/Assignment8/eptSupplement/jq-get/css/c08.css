@@ -168,7 +168,3 @@ input[type=submit]:hover {
 #sessions li .time {
   display: inline-block;
   width: 60px;}
-
-#details p {
-  padding: 0;
-  margin: 0.8em 0 0 0;}
