@@ -1,3 +1,8 @@
+// NOTE: This example will not work locally: 
+// In Chrome / IE / Safari you may experience problems because of cross-domain restrictions.
+// In Firefox, content may load but styles may not be applied.
+// You can try it out on the website for the book http://javascriptbook.com/code/c08/
+// or run it on your own server.
 
 $('nav a').on('click', function(e) {
   e.preventDefault();
