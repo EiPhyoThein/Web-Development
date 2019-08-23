@@ -170,7 +170,7 @@ input[type=submit]:hover {
   width: 60px;}
 #details div {
   text-align: left;
-  padding: 1.8em 0 0em 1;}
+  padding: 1.8em 0em 0em 1em;}
 #details p {
-  padding: 0;
-  margin: 0.8em 0 0 0;}
+  padding: 0em;
+  margin: 0.8em 0em 0em 0em;}
