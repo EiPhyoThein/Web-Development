@@ -1,12 +1,17 @@
 {
-    "USD":"840",
-    "CHF":"1319",
-    "BDT":"298",
-    "SGD":"632",
-    "JPY":"1053",
-    "GBP":"887",
-    "AUD":"759",
-    "UK": "20.00",
-    "US": "35.99",
-    "AU": "39.99"
-}
+    "info":"Central Bank of Myanmar",
+    "description":"Official Website of Central Bank of Myanmar",
+    "timestamp":"1337936081",
+    "rates":{
+        "USD":"840",
+        "CHF":"1319",
+        "BDT":"298",
+        "SGD":"632",
+        "JPY":"1053",
+        "GBP":"887",
+        "AUD":"759",
+        "UK": "20.00",
+        "US": "35.99",
+        "AU": "39.99"
+        }
+    }

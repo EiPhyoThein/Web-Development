@@ -9,15 +9,24 @@ function loadRates() {
   .done( function(data){                                 // SERVER RETURNS DATA
     var d = new Date();                                  // Create date object
     var hrs = d.getHours();                              // Get hours
-    var mins = d.getMinutes();                           // Get mins
-    var msg = '<h2>Exchange Rates</h2>';                 // Start message
-    $.each(data, function(key, val) {                    // Add each rate
+    var mins = d.getMinutes();
+    var rates=data.rates; 
+    var info= data.info;
+    var description=data.description;                          // Get mins
+    
+    var msg = '<h2>Exchange Rates</h2>';  // Start message
+    msg+='<h4>'+info+'</h4>';
+    msg+='<h5>'+description+'</h5>';
+        
+    $.each(rates, function(key, val) {                    // Add each rate
       msg += '<div class="' + key + '">' + key + ': ' + val + '</div>';
     });
     msg += '<br>Last update: ' + hrs + ':' + mins + '<br>'; // Show update time
     $('#rates').html(msg);                               // Add rates to page
+  
   }).fail( function() {                                  // THERE IS AN ERROR
     $('#rates').text('Sorry, we cannot load rates.');   // Show error message 
+  
   }).always( function() {                                // ALWAYS RUNS
      var reload = '<a id="refresh" href="#">';           // Add refresh link
      reload += '<img src="img/refresh.png" alt="refresh" /></a>';
