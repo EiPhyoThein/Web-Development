@@ -1,12 +1,14 @@
 /* The Maker Bus Stylesheet */
 
-@import url(https://fonts.googleapis.com/css?family=Oswald:700,400);
+/* @import url(https://fonts.googleapis.com/css?family=Oswald:700,400);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+*/
 
 body {
   background-color: #fff;
   color: #666;
-  font-family: 'Open Sans', arial, sans-serif;
+  /*font-family: 'Open Sans', arial, sans-serif;*/
+  font-family:  arial, sans-serif;
   width: 960px;
   margin: 0 auto 0 auto;}
 
@@ -40,10 +42,12 @@ h3 {
   margin: 0;
   font-size: 1.4em;
   color: #3fbb8a; 
-  font-family: oswald, arial, sans-serif;}
+  /* font-family: oswald, arial, sans-serif; */
+  font-family: arial, sans-serif;}
 
 nav {
-  font-family: oswald, arial, sans-serif;
+  /* font-family: oswald, arial, sans-serif; */
+  font-family: arial, sans-serif;
   float: right; 
   width: 600px;
   padding-top: 30px;
@@ -146,7 +150,8 @@ h2, h4, h5{
 
 /* Example */
 #event a {
-  font-family: oswald, arial, sans-serif;
+  /* font-family: oswald, arial, sans-serif; */
+  font-family: arial, sans-serif;
   font-size: 120%;
   text-transform: uppercase;
   text-align: left;
@@ -160,7 +165,8 @@ h2, h4, h5{
   margin-right: 10px;}
 #event a:hover, #sessions a:hover {color: #1fb684;}
 #sessions a {
-  font-family: oswald, arial, sans-serif;
+  /* font-family: oswald, arial, sans-serif; */
+  font-family: arial, sans-serif;
   font-size: 120%;}
 #sessions p {
   margin-top: 2em;}
