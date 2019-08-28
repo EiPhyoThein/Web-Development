@@ -126,9 +126,17 @@ input[type=submit]:hover {
 #rates {padding: 50px 100px 50px 100px;}
 #reload {padding: 0 100px 0 100px;}
 #rates, #reload {text-align: left;}
+.AUD {background-image: url('../img/AUD.png');}
+.BDT {background-image: url('../img/BDT.png');}
+.CHF {background-image: url('../img/CHF.png');}
+.GBP {background-image: url('../img/GBP.png');}
+.JPY {background-image: url('../img/JPY.png');}
+.SGD {background-image: url('../img/SGD.png');}
+.USD {background-image: url('../img/USD.png');}
 .AU {background-image: url('../img/au.png');}
 .UK {background-image: url('../img/gb.png');}
 .US {background-image: url('../img/us.png');}
+
 
 
 /* Example */
