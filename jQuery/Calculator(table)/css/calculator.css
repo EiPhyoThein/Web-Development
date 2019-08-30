@@ -1,0 +1,24 @@
+#calculator{
+    border: 2px solid olive;
+    background: darkcyan;
+    margin: auto;
+    border-collapse: collapse;
+    text-align: center;
+    vertical-align: center;
+
+}
+td{
+    width: 4em;
+    height: 35px;
+    border: 2px solid olive;    
+    color: white;
+    font-size: 18px;
+}
+#ac{
+    color: greenyellow;
+    font-size: 22px;
+    
+}
+#result{
+    visibility: hidden;
+}

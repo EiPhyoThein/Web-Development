@@ -15,7 +15,7 @@ $('nav a').on('click', function(e) {
   //when click on link, clear all tags from #container
   $('#container').remove();                                 // Remove content
 
-  //using jQuery and ajax
+  //using $.ajax and its settings
   $.ajax({
     type: "GET",                                            // GET or POST
     url: url,                                               // Path to file
