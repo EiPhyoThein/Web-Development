@@ -1,0 +1,18 @@
+#table {
+    background: antiquewhite;
+    margin: auto;
+}
+
+td {
+    width: 45px;
+    height: 45px;
+    text-align: center;
+}
+
+#result {
+    text-align: right;
+}
+
+#num0 {
+    text-align: left;
+}
