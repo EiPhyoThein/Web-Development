@@ -1,0 +1,29 @@
+#table {
+    background: antiquewhite;
+    margin: auto;
+}
+
+h1 {
+    font: 2em sans-serif;
+    color: brown;
+    text-align: center;
+}
+
+td {
+    width: 40px;
+    height: 45px;
+    text-align: center;
+}
+
+#result {
+    width: 200px;
+    height: 40px;
+    text-align: right;
+    font: 1.3em sans-serif;
+    background-color: bisque;
+    color: blue
+}
+
+#clear {
+    color: red;
+}
