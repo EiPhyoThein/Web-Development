@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flask App</title>
+</head>
+<body>
+    <h1>{{  blog['name'] }}</h1>
+    <p>Welcome to my blog! Enjoy!</p>
+    <ul>
+        {% for post_id, post in blog['posts'].items() %}
+            <li><a href="{{ url_for('post',post_id=post_id)  }}">{{ post['title'] }}</a></li>
+        {% endfor %}
+    </ul>
+    
+</body>
+</html>
