@@ -1,0 +1,53 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Website</title>
+    <style>
+        body {
+            color: pink;
+        }
+    </style>
+</head>
+<body>
+    <h1> {{ headline }}</h1> -->
+
+    <!-- {% if new_year %}
+        <h1>Yes! Happy New Year!</h1>
+    {% else %}
+        <h1>NO</h1>
+    {% endif%} -->
+
+    <!-- <h1>First Page</h1>
+    <h1>Names</h1>
+    <ul>
+        {% for name in names %}
+        <li> {{  name }}</li>
+        {% endfor %}
+    </ul>
+
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum animi quam, nihil eius fugit officiis optio obcaecati, nam necessitatibus incidunt doloribus tenetur accusamus dolore sit consectetur molestias. Iusto, dolores vel.</p>
+    <a href="{{ url_for('more') }}">See more ...</a> -->
+<!-- </body>
+</html> -->
+
+    
+    {% extends "layout.html" %}
+
+    {%  block heading %} First Page  {%  endblock %}
+    
+    {% block body %}  
+       <form action="{{ url_for('hello') }}" method='post'>
+           <input type="text" name="name" placeholder="Enter Your Name">
+           <button>Submit</button>
+       </form>
+    {% endblock %}    
+        
+
+
+
+    
+
+    
