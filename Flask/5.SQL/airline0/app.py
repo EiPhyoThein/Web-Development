@@ -29,4 +29,4 @@ def book():
     db.execute("INSERT INTO passengers(name,flight_id) VALUES(:name,:flight_id)",
     {"name":name,"flight_id":flight_id})
     db.commit()
-    return render_template("success.html")
+    return render_template("success.html",name=name)
