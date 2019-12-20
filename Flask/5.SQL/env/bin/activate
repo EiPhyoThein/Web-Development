@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="/home/me/Web-Development/Flask/TicTacToe/env"
+VIRTUAL_ENV="/home/me/Web-Development/Flask/5.SQL/env"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
