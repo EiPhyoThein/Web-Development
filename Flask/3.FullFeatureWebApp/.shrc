@@ -1,0 +1,20 @@
+#save this file  in home directory and run with 'source ./.shrc'
+
+set echo off
+clear
+
+export WORKON_HOME=~/.virtualenv
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+source /home/me/.local/bin/virtualenvwrapper.sh
+
+
+export FLASK_APP=app.py
+export FLASK_DEBUG=True
+
+
+python --version
+lsvirtualenv -b
+
+workon first-env
+cd /home/me/Web-Development/Flask/3.FullFeatureWebApp/Part02
+setvirtualenvproject
