@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1> Student Information</h1>
+    <p>
+        Student's name is {{ student.name }}. {{ student.name }} is one of clever students.
+    </p>
+    
+    <a href="{{ url_for('index') }}">See all students</a> <br>
+    <a href="{{ url_for('edit', id=student.id) }}">Edit this student</a>
+{% endblock %}
