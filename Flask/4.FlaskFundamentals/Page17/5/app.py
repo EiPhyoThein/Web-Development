@@ -15,6 +15,9 @@ students=[eiPhyoThein,mayThuHnin,thiriSan]
 @app.route('/students/')
 @app.route('/students',methods=["GET","POST"])
 def index():
+    if request.method=="POST":
+        students.append(Student(request.form['name']))
+        return redirect(url_for('index'))
     return render_template("index.html",students=students)
 
 @app.route('/students/new')

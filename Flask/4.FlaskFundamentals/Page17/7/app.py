@@ -15,13 +15,16 @@ students=[eiPhyoThein,mayThuHnin,thiriSan]
 @app.route('/students/')
 @app.route('/students',methods=["GET","POST"])
 def index():
+    if request.method=="POST":
+        students.append(Student(request.form['name']))
+        return redirect(url_for('index'))
     return render_template("index.html",students=students)
 
 @app.route('/students/new')
 def new():
     return render_template("new.html")
 
-@app.route('/students/<int:id>',methods=["GET"])
+@app.route('/students/<int:id>',methods=["GET","PATCH","DELETE"])
 def show(id):
     found_student=""
     for student in students:
@@ -30,6 +33,13 @@ def show(id):
     if found_student=="":
         return render_template("error.html")
 
+    if request.method==b"PATCH":
+        found_student.name=request.form['name']
+        return redirect(url_for('index'))
+
+    if request.method==b'DELETE':
+        students.remove(found_student)
+        return redirect(url_for("index"))
     return render_template("show.html",student=found_student)
 
 
