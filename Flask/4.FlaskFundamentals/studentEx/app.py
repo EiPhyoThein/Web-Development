@@ -37,6 +37,7 @@ def show(id):
     if found_student=="":
         return render_template("error.html")
 
+    #change data with edit characters in form fields
     if request.method==b"PATCH":
         found_student.first_name=request.form['first_name']
         found_student.last_name=request.form['last_name']

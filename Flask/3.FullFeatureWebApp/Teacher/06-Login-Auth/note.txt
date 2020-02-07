@@ -1,0 +1,22 @@
+# install crypt
+pip install flask-bcrypt
+
+# Encrypt Password
+>>> from flask-bcrypt import Bcrypt
+>>> bcrypt = Bcrypt()
+>>> bcrypt.generate_password_hash('testing')
+>>> bcrypt.generate_password_hash('testing').decode('utf-8')
+
+# Check Password
+>>> hashed_pw = bcrypt.generate_password_hash('testing').decode('utf-8')
+>>> bcrypt.check_password_hash(hashed_pw, 'testing')
+
+# Database
+>>> from flaskblog import db 
+>>> from flaskblog.models import User
+>>> user = User.query.first()
+>>> user
+>>> user.password
+
+# install login
+pip install flask-login

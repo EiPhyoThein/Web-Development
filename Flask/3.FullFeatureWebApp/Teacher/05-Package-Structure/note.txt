@@ -1,0 +1,11 @@
+# run flask project
+python run.py
+
+# Change the working directory
+from flaskblog import db
+
+# Import User and Post models
+from flaskblog.models import User, Post
+
+db.create_all()
+User.query.all()

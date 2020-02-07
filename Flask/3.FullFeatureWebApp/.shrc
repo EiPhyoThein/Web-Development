@@ -16,5 +16,7 @@ python --version
 lsvirtualenv -b
 
 workon first-env
-cd /home/me/Web-Development/Flask/3.FullFeatureWebApp/Part02
+cd /home/me/Web-Development/Flask/3.FullFeatureWebApp/Part05/
 setvirtualenvproject
+
+python run.py
