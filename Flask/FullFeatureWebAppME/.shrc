@@ -1,0 +1,5 @@
+clear
+. env/bin/activate
+export FLASK_APP=SQLme/flaskblog.py
+export FLASK_DEBUG=1
+flask run
