@@ -1,0 +1,5 @@
+<<<<<<< HEAD
+hello
+=======
+hello this is testing.
+>>>>>>> 9634e80ff2b748c1e949a56c395168ec9f18176a
